@@ -1,15 +1,17 @@
 'use client';
 
-// import { Transition, Dialog } from '@headlessui/react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import * as Dialog from '@radix-ui/react-dialog';
 
 const Modal = ({ children }) => {
 	const router = useRouter();
+	const pathname = usePathname();
 
 	const handleOnOpenChange = (open) => {
 		if (!open) {
-			router.back();
+			pathname === '/form-modal-routing'
+				? router.push(pathname)
+				: router.back();
 		}
 	};
 

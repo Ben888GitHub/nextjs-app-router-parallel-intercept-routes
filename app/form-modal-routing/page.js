@@ -27,9 +27,7 @@ const FormModalRouting = () => {
 			</Link>
 			<br />
 			<br />
-			{/* <Link href="/form-modal-routing" className="text-2xl underline">
-				Go to Form in Modal
-			</Link> */}
+
 			<div
 				onClick={handleShowFormModal}
 				className="text-2xl underline cursor-pointer"
